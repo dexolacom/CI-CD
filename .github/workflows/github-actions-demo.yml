@@ -15,3 +15,9 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+  lint:
+    name: Code standards
+    runs-on: ubuntu-latest
+    steps:
+      - name: "🔍 lint code"
+        run: yarn lint
