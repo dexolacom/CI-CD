@@ -19,5 +19,8 @@ jobs:
     name: Code standards
     runs-on: ubuntu-latest
     steps:
+      - name: "🔧 install npm@latest"
+        run: npm i -g npm@latest
+        
       - name: "🔍 lint code"
-        run: yarn lint
+        run: npm run lint
